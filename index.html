@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator | OIBSIP</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="calculator-wrapper">
+
+        <section class="calculator" aria-label="Calculator">
+
+            <!-- Calculator Header -->
+            <div class="calculator-header">
+                <div>
+                    <p class="brand">OIBSIP</p>
+                    <h1>Calculator</h1>
+                </div>
+
+                <div class="status-dot"></div>
+            </div>
+
+
+            <!-- Display -->
+            <div class="display-container">
+
+                <div id="previous-display" class="previous-display">
+                    0
+                </div>
+
+                <div id="current-display" class="current-display">
+                    0
+                </div>
+
+            </div>
+
+
+            <!-- Calculator Buttons -->
+            <div class="calculator-buttons">
+
+                <button
+                    type="button"
+                    class="calculator-btn function-btn"
+                    data-action="clear">
+                    C
+                </button>
+
+                <button
+                    type="button"
+                    class="calculator-btn function-btn"
+                    data-action="backspace"
+                    aria-label="Backspace">
+                    ⌫
+                </button>
+
+                <button
+                    type="button"
+                    class="calculator-btn operator-btn"
+                    data-operator="÷">
+                    ÷
+                </button>
+
+                <button
+                    type="button"
+                    class="calculator-btn operator-btn"
+                    data-operator="×">
+                    ×
+                </button>
+
+
+                <button
+                    type="button"
+                    class="calculator-btn number-btn"
+                    data-number="7">
+                    7
+                </button>
+
+                <button
+                    type="button"
+                    class="calculator-btn number-btn"
+                    data-number="8">
+                    8
+                </button>
+
+                <button
+                    type="button"
+                    class="calculator-btn number-btn"
+                    data-number="9">
+                    9
+                </button>
+
+                <button
+                    type="button"
+                    class="calculator-btn operator-btn"
+                    data-operator="-">
+                    −
+                </button>
+
+
+                <button
+                    type="button"
+                    class="calculator-btn number-btn"
+                    data-number="4">
+                    4
+                </button>
+
+                <button
+                    type="button"
+                    class="calculator-btn number-btn"
+                    data-number="5">
+                    5
+                </button>
+
+                <button
+                    type="button"
+                    class="calculator-btn number-btn"
+                    data-number="6">
+                    6
+                </button>
+
+                <button
+                    type="button"
+                    class="calculator-btn operator-btn"
+                    data-operator="+">
+                    +
+                </button>
+
+
+                <button
+                    type="button"
+                    class="calculator-btn number-btn"
+                    data-number="1">
+                    1
+                </button>
+
+                <button
+                    type="button"
+                    class="calculator-btn number-btn"
+                    data-number="2">
+                    2
+                </button>
+
+                <button
+                    type="button"
+                    class="calculator-btn number-btn"
+                    data-number="3">
+                    3
+                </button>
+
+                <button
+                    type="button"
+                    class="calculator-btn equals-btn"
+                    data-action="calculate">
+                    =
+                </button>
+
+
+                <button
+                    type="button"
+                    class="calculator-btn number-btn zero-btn"
+                    data-number="0">
+                    0
+                </button>
+
+                <button
+                    type="button"
+                    class="calculator-btn number-btn"
+                    data-number=".">
+                    .
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <p class="project-label">
+            Web Development & Designing · Level 2 · Task 1
+        </p>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
