@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="A frontend login authentication system built for the OIBSIP internship."
+    >
+
+    <title>SecureAuth | Login</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         MAIN AUTHENTICATION CONTAINER
+    ====================================== -->
+
+    <main class="auth-page">
+
+        <!-- Background decoration -->
+
+        <div class="background-glow glow-one"></div>
+        <div class="background-glow glow-two"></div>
+
+
+        <!-- =====================================
+             BRAND / INTRO
+        ====================================== -->
+
+        <section class="brand-section">
+
+            <div class="brand-logo">
+                Secure<span>Auth</span>
+            </div>
+
+            <p class="brand-label">
+                SECURE ACCESS
+            </p>
+
+            <h1>
+                Your space.
+                <span>Your control.</span>
+            </h1>
+
+            <p class="brand-description">
+                A simple and secure authentication experience
+                designed to keep your account protected.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             AUTH CARD
+        ====================================== -->
+
+        <section class="auth-card">
+
+            <!-- =================================
+                 LOGIN FORM
+            ================================== -->
+
+            <div
+                class="auth-form active"
+                id="loginForm"
+            >
+
+                <div class="form-heading">
+
+                    <p class="form-label">
+                        WELCOME BACK
+                    </p>
+
+                    <h2>
+                        Sign in
+                    </h2>
+
+                    <p>
+                        Enter your credentials to continue.
+                    </p>
+
+                </div>
+
+
+                <form id="login">
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <div class="label-row">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                            <span class="password-hint">
+                                Minimum 8 characters
+                            </span>
+
+                        </div>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                data-target="loginPassword"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Error -->
+
+                    <p
+                        class="form-message error-message"
+                        id="loginError"
+                    ></p>
+
+
+                    <!-- Submit -->
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Sign In
+                    </button>
+
+                </form>
+
+
+                <!-- Register switch -->
+
+                <p class="switch-text">
+
+                    Don't have an account?
+
+                    <button
+                        type="button"
+                        class="switch-btn"
+                        id="showRegister"
+                    >
+                        Create account
+                    </button>
+
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 REGISTER FORM
+            ================================== -->
+
+            <div
+                class="auth-form"
+                id="registerForm"
+            >
+
+                <div class="form-heading">
+
+                    <p class="form-label">
+                        GET STARTED
+                    </p>
+
+                    <h2>
+                        Create account
+                    </h2>
+
+                    <p>
+                        Create your secure account in a few steps.
+                    </p>
+
+                </div>
+
+
+                <form id="register">
+
+                    <!-- Name -->
+
+                    <div class="form-group">
+
+                        <label for="registerName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registerName"
+                            placeholder="Janhvi Singh"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="registerEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label for="registerPassword">
+                            Password
+                        </label>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="registerPassword"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                data-target="registerPassword"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                        <div class="password-rules">
+
+                            <span id="lengthRule">
+                                • 8+ characters
+                            </span>
+
+                            <span id="numberRule">
+                                • At least 1 number
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Repeat your password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Register Message -->
+
+                    <p
+                        class="form-message"
+                        id="registerMessage"
+                    ></p>
+
+
+                    <!-- Submit -->
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Create Account
+                    </button>
+
+                </form>
+
+
+                <!-- Login switch -->
+
+                <p class="switch-text">
+
+                    Already have an account?
+
+                    <button
+                        type="button"
+                        class="switch-btn"
+                        id="showLogin"
+                    >
+                        Sign in
+                    </button>
+
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 DASHBOARD
+            ================================== -->
+
+            <div
+                class="dashboard"
+                id="dashboard"
+            >
+
+                <div class="dashboard-icon">
+                    ✓
+                </div>
+
+                <p class="form-label">
+                    AUTHENTICATED
+                </p>
+
+                <h2>
+                    Welcome,
+                    <span id="dashboardName">
+                        User
+                    </span>
+                </h2>
+
+                <p class="dashboard-email" id="dashboardEmail">
+                    user@example.com
+                </p>
+
+                <div class="dashboard-info">
+
+                    <div class="info-item">
+
+                        <span>
+                            Account Status
+                        </span>
+
+                        <strong>
+                            Active
+                        </strong>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <span>
+                            Access
+                        </span>
+
+                        <strong>
+                            Protected
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="logout-btn"
+                    id="logoutBtn"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
